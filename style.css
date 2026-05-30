@@ -9,156 +9,211 @@ html {
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f4f1ec;
-  color: #222;
+  background:
+    radial-gradient(circle at top left, rgba(210, 180, 140, 0.22), transparent 32%),
+    linear-gradient(180deg, #f7f2ea 0%, #efe7da 100%);
+  color: #2b2520;
   line-height: 1.7;
 }
 
-/* Hero Section */
+/* Hero */
 
 .hero {
-  min-height: 65vh;
-  background:
-    linear-gradient(rgba(31, 41, 55, 0.78), rgba(31, 41, 55, 0.78)),
-    linear-gradient(135deg, #243b53, #486581);
-  color: white;
+  min-height: 58vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 78px 24px;
+  background:
+    linear-gradient(rgba(32, 38, 48, 0.78), rgba(32, 38, 48, 0.78)),
+    url("images/cajita-box.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fffaf0;
   text-align: center;
-  padding: 60px 20px;
 }
 
-.hero-content {
-  max-width: 900px;
+.hero-inner {
+  max-width: 880px;
 }
 
-.course-label {
+.eyebrow {
+  margin: 0 0 16px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #d9e2ec;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 12px;
+  letter-spacing: 2.5px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #f0d9a6;
 }
 
 .hero h1 {
-  font-size: 52px;
-  line-height: 1.15;
-  margin: 0 0 18px;
+  margin: 0;
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.05;
+  font-weight: 700;
 }
 
-.hero-subtitle {
-  font-size: 20px;
+.hero-text {
   max-width: 760px;
-  margin: 0 auto;
-  color: #f0f4f8;
-}
-
-/* Navigation */
-
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: white;
-  border-bottom: 1px solid #ddd;
-  padding: 14px 20px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-
-.navbar a {
-  color: #243b53;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 0 14px;
-  font-size: 15px;
-}
-
-.navbar a:hover {
-  color: #b45309;
-  text-decoration: underline;
+  margin: 26px auto 0;
+  font-size: clamp(17px, 2.2vw, 22px);
+  color: #f5eadb;
 }
 
 /* Main Layout */
 
 main {
-  padding: 34px 16px 60px;
+  padding: 58px 22px 82px;
 }
 
-.section {
-  max-width: 1050px;
-  margin: 42px auto;
-  padding: 42px;
-  background: white;
-  border-radius: 18px;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+.content-wrap {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 34px;
+  align-items: start;
 }
 
-.section-label {
-  display: inline-block;
-  background: #eef3f8;
-  color: #334e68;
-  border: 1px solid #d9e2ec;
-  padding: 6px 13px;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: bold;
-  margin-bottom: 12px;
+/* Side Panel */
+
+.side-panel {
+  position: sticky;
+  top: 28px;
+  background: rgba(255, 252, 246, 0.92);
+  border: 1px solid rgba(116, 89, 58, 0.18);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 18px 40px rgba(74, 54, 35, 0.10);
 }
 
-.section h2 {
-  color: #243b53;
+.side-label {
+  margin: 0 0 12px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8a5a2b;
+  font-weight: 700;
+}
+
+.side-panel h2 {
+  margin: 0 0 16px;
   font-size: 32px;
-  line-height: 1.25;
-  margin-top: 6px;
-  margin-bottom: 20px;
-  border-left: 6px solid #f0b429;
-  padding-left: 15px;
+  line-height: 1.18;
+  color: #3d2f22;
 }
 
-.section h3 {
-  color: #243b53;
+.side-panel p {
+  margin: 0;
+  font-size: 16px;
+  color: #5c4a3a;
 }
 
-.section p {
-  font-size: 17px;
-  margin-bottom: 18px;
-}
-
-.section-intro {
-  background: #f8fafc;
-  border-left: 5px solid #486581;
-  padding: 18px 20px;
-  border-radius: 12px;
-  color: #334155;
-}
-
-/* Reyna Essay Card */
-
-.essay-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 30px;
+.side-nav {
   margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
 }
 
-.essay-card p {
+.side-nav a {
+  text-decoration: none;
+  color: #4c3826;
+  background: #fff6e5;
+  border: 1px solid rgba(138, 90, 43, 0.16);
+  border-radius: 12px;
+  padding: 9px 12px;
+  font-size: 15px;
+  transition: 0.18s ease;
+}
+
+.side-nav a:hover {
+  background: #f1d8aa;
+  transform: translateX(3px);
+}
+
+.source-note {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(116, 89, 58, 0.22);
+}
+
+.source-note span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  color: #8a5a2b;
+  font-weight: 700;
+}
+
+.source-note p {
+  color: #3d2f22;
+}
+
+/* Panels */
+
+.main-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.essay-panel {
+  background: #fffdf8;
+  border: 1px solid rgba(116, 89, 58, 0.18);
+  border-radius: 28px;
+  padding: clamp(30px, 5vw, 56px);
+  box-shadow: 0 24px 55px rgba(74, 54, 35, 0.13);
+}
+
+.intro-panel,
+.conclusion-panel {
+  background: #fffaf0;
+}
+
+.section-tag {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: #f4e4c8;
+  color: #68451f;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.essay-panel h2 {
+  margin: 0 0 28px;
+  font-size: clamp(31px, 4vw, 44px);
+  line-height: 1.15;
+  color: #2f261d;
+}
+
+.essay-panel p {
+  margin: 0 0 24px;
   font-size: 18px;
-  margin-bottom: 24px;
+  color: #2d2925;
 }
 
-.essay-card p:last-child {
+.essay-panel p:last-child {
   margin-bottom: 0;
 }
 
+/* Quote Style */
+
 .quote {
-  color: #1f2937;
+  display: inline;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
   font-weight: 600;
-  background: #fff7e6;
-  padding: 2px 4px;
+  color: #241f1a;
+  background: #fff1cf;
+  border-bottom: 2px solid #e2b75d;
+  padding: 1px 4px;
   border-radius: 4px;
 }
 
@@ -166,175 +221,198 @@ em {
   color: #1f2937;
 }
 
-/* Growth Summary */
+/* Cajita Cards */
 
-.growth-summary {
-  margin-top: 32px;
-  padding: 28px;
-  background: #f8fafc;
-  border-radius: 16px;
-  border: 1px solid #e5e7eb;
-}
-
-.growth-summary h3 {
-  margin-top: 0;
-  font-size: 24px;
-}
-
-.growth-steps {
+.cajita-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+  margin: 30px 0 28px;
 }
 
-.step {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  background: white;
-  padding: 18px;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
+.cajita-card {
+  background: #fff8eb;
+  border: 1px solid rgba(138, 90, 43, 0.18);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(116, 72, 24, 0.07);
 }
 
-.step-number {
-  min-width: 34px;
-  height: 34px;
-  background: #f0b429;
-  color: #1f2933;
-  border-radius: 50%;
+.cajita-image {
+  height: 150px;
+  background:
+    linear-gradient(135deg, #f3e2c4, #fff9ec);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
+  overflow: hidden;
 }
 
-.step p {
-  margin: 0;
+.cajita-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cajita-card h3 {
+  margin: 18px 18px 8px;
+  font-size: 20px;
+  color: #2f261d;
+}
+
+.cajita-card p {
+  margin: 0 18px 20px;
   font-size: 16px;
+  color: #4b4036;
 }
 
-/* Future Placeholder Section */
+/* Advice Section */
 
-.future-section {
-  background: #fcfcfc;
+.advice-panel {
+  padding-bottom: clamp(36px, 5vw, 62px);
 }
 
-.placeholder-grid {
+.advice-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-  margin-top: 24px;
+  grid-template-columns: 1fr;
+  gap: 22px;
 }
 
-.placeholder-card {
-  background: #f8fafc;
-  border: 1px dashed #94a3b8;
-  border-radius: 16px;
-  padding: 22px;
+.advice-card {
+  border-radius: 18px;
+  padding: 24px 26px;
 }
 
-.placeholder-card h3 {
-  margin-top: 0;
-  color: #334e68;
+.advice-card h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  line-height: 1.35;
+  color: #2f261d;
 }
 
-.placeholder-card p {
-  font-size: 16px;
-  margin-bottom: 0;
+.advice-card p {
+  margin: 0;
+  font-size: 17px;
+  color: #3a332c;
 }
 
-/* Footer */
-
-footer {
-  background: #243b53;
-  color: white;
-  text-align: center;
-  padding: 34px 20px;
+.teacher-advice {
+  background: #f3e2c4;
+  border: 1px solid rgba(129, 83, 35, 0.28);
+  border-left: 6px solid #a96f2d;
+  box-shadow: 0 8px 20px rgba(116, 72, 24, 0.08);
 }
 
-footer p {
-  margin: 4px 0;
+.student-advice {
+  background: #fff9ec;
+  border: 1px solid rgba(190, 150, 85, 0.24);
+  border-left: 6px solid #d8b56a;
 }
 
-.footer-small {
-  font-size: 14px;
-  color: #d9e2ec;
+.student-advice-heading {
+  margin-top: 72px;
+  margin-bottom: 34px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(116, 89, 58, 0.18);
 }
 
-/* Tablet */
+/* Responsive */
 
 @media (max-width: 900px) {
-  .hero h1 {
-    font-size: 42px;
+  .content-wrap {
+    grid-template-columns: 1fr;
   }
 
-  .hero-subtitle {
+  .side-panel {
+    position: static;
+  }
+
+  .hero {
+    min-height: 48vh;
+  }
+
+  .cajita-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-advice-heading {
+    margin-top: 58px;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 34px 14px 56px;
+  }
+
+  .hero {
+    padding: 58px 18px;
+  }
+
+  .essay-panel {
+    border-radius: 22px;
+    padding: 26px;
+  }
+
+  .essay-panel p {
+    font-size: 16.5px;
+  }
+
+  .side-panel {
+    border-radius: 20px;
+    padding: 24px;
+  }
+
+  .quote {
+    padding: 1px 3px;
+  }
+
+  .advice-card {
+    padding: 20px;
+  }
+
+  .advice-card h3 {
     font-size: 18px;
   }
 
-  .section {
-    padding: 32px;
+  .advice-card p {
+    font-size: 16px;
   }
 
-  .growth-steps {
-    grid-template-columns: 1fr;
-  }
-
-  .placeholder-grid {
-    grid-template-columns: 1fr;
+  .student-advice-heading {
+    margin-top: 50px;
+    margin-bottom: 26px;
   }
 }
+/* Back to Top Button */
 
-/* Phone */
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  background: #3d2f22;
+  color: #fffaf0;
+  text-decoration: none;
+  padding: 11px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 8px 22px rgba(74, 54, 35, 0.25);
+  border: 1px solid rgba(255, 250, 240, 0.35);
+  transition: 0.18s ease;
+  z-index: 200;
+}
+
+.back-to-top:hover {
+  background: #8a5a2b;
+  transform: translateY(-2px);
+}
 
 @media (max-width: 600px) {
-  .hero {
-    min-height: 55vh;
-    padding: 48px 18px;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .hero-subtitle {
-    font-size: 16px;
-  }
-
-  .navbar {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    justify-content: flex-start;
-  }
-
-  .navbar a {
-    margin: 0 10px;
-  }
-
-  main {
-    padding: 22px 12px 44px;
-  }
-
-  .section {
-    padding: 24px;
-    margin: 28px auto;
-  }
-
-  .section h2 {
-    font-size: 25px;
-  }
-
-  .section p {
-    font-size: 16px;
-  }
-
-  .essay-card {
-    padding: 22px;
-  }
-
-  .essay-card p {
-    font-size: 16px;
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+    padding: 10px 14px;
+    font-size: 13px;
   }
 }
